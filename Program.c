@@ -23,6 +23,7 @@ int main()
 	printf("Enter the Infix\n");
 	gets(infix);
 	n=strlen(infix);
+	infix[n]=('$');
 	defining_priority();
 	printf("Output is : %s \n",postfix);
 
@@ -32,7 +33,7 @@ void defining_priority()
 {
 	int i;
 	char symbol;
-	for (i = 0; i < n ; ++i)
+	for (i = 0; i <=n ; ++i)
 	{
 		symbol=infix[i];
 		switch(symbol)
